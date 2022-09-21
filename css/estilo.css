@@ -1,0 +1,195 @@
+*{
+    margin: 0; /* Zera todas as margens externas dos elementos */
+    padding: 0;/* Zera todas as margens internas dos elementos */
+}
+
+/* p{font-family: 'Roboto', sans-serif;} */
+
+body{
+    background-color:black;
+
+    
+}
+
+.text-justify{
+    text-align: justify;
+    text-justify: inter-character;    
+}
+
+.flex{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.content-justify{
+    justify-content: space-between;
+}
+
+section#container{
+    width:900px; /* Largura da Caixa */
+    height:1309px; /* Altura da Caixa */
+    border:80px solid rgb(5, 5, 5); /* Espessura da Borda, Tipo da Borda e Cor da Borda */
+    background-size: 1080px 900px; /* tamanho do background */
+    background-color:rgb(5, 5, 5); /* Cor da Caixa */
+    margin:auto; /* Centraliza a container de acordo com a largura do dispositivo */
+    border-top:0px; /* borda superior */
+}
+
+section#container h1{
+    font-family: 'Reem Kufi Fun';
+    font-size:60px; /* tamanho da fonte */
+    font-weight: 600; /* força do negrito: de 400 a 900 */
+    color:#eea243; /* cor da letra */
+    padding-top: 10px; /* margem interna superios */
+    text-align: center;
+}
+
+section#container h1 span.note{
+    font-family: 'Reem Kufi Fun';
+    font-size:60px; /* tamanho da fonte */
+    font-weight: 600; /* força do negrito: de 400 a 900 */
+    color:rgb(255, 235, 203); /* cor da letra */
+    padding-top: 10px; /* margem interna superios */
+    text-align: center;
+}
+
+section#container h2{
+    font-family: 'Reem Kufi Fun';
+    font-size:40px;
+    font-weight:500;
+    color:white;
+    padding-top: 0px;
+}
+
+section#container h3{
+    font-family:'Source Sans Pro';
+    font-size:26px;
+    font-weight:400;
+    color:#eea243;
+    padding-top: 5px;
+}
+
+div#sobremim{
+    text-align: left;
+}
+
+div#sobremim h2{
+    margin-left:10px;
+}
+
+.sobre{
+    text-align: left;
+    color:#eea243;
+    font-family: 'Roboto';
+    font-size: 18px;
+    margin-left:10px;
+}
+
+div#formacao{
+    width:900px;
+    height:333px;
+    background-position-y: 100px;
+    background-size:100%;
+    background-repeat:no-repeat;
+    background-color:rgb(5, 5, 5);
+    margin-top:8px;
+    text-align: right;
+}
+
+div#formacao h2{
+    color:white;
+    padding-top: 35px;
+    margin-right: 10px;
+    
+}
+
+div#formacao h3{
+    margin-right: 10px;
+    padding-top: 17px;
+}
+
+div#formacao ul{
+    list-style: none;
+    margin-right: 10px;
+}
+
+div#formacao li{
+    font-family:'Roboto';
+    font-size: 18px;
+    font-weight:900px;
+    color:white;
+}
+
+/* div#idiomas{
+    width:1200px;
+    height:auto;
+    background-color:aquamarine; 
+} */
+
+div#hobbies{
+    width:900px;
+    height:333px;
+    background-size:100%;
+    background-repeat:no-repeat;
+    background-position-y: 100px;
+    background-color:rgb(5, 5, 5);
+    margin-top: 0px;
+    color:white;
+}
+
+div#hobbies h2{
+    color:white;
+    padding-top: 30px;
+    margin-left: 10px;
+}
+
+div#hobbies ul{
+    list-style: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 33px;
+}
+
+div#hobbies li{
+    font-family:'Roboto';
+    font-size: 18px;
+    font-weight:400px;
+    color:#eea243;
+    padding-top: 20px;
+}
+
+div#interesses{
+    width:900px;
+    height:333px;
+    background-position-y: 100px;
+    background-size:100%;
+    background-repeat:no-repeat;
+    background-color:rgb(5, 5, 5);
+    margin-top: 0px;
+}
+
+div#interesses h2{
+    color:white;
+    text-align: right;
+    padding-top: 30px;
+    margin-right: 10px;
+}
+
+div#interesses ul{
+    list-style: none;
+    text-align: right;
+    margin-right: 10px;
+    padding-top: 34px;
+}
+
+div#interesses li{
+    font-family:'Roboto';
+    font-size: 25px;
+    font-weight: 400;
+    color: #eea243;
+    padding-top: 5px; 
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>> IMAGENS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
