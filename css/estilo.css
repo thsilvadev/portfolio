@@ -1,65 +1,67 @@
+/* CONFIGURAÇÕES BÁSICAS */
+
 *{
     margin: 0; /* Zera todas as margens externas dos elementos */
     padding: 0;/* Zera todas as margens internas dos elementos */
 }
 
-/* p{font-family: 'Roboto', sans-serif;} */
-
 body{
     background-color:black;
-
-    
-}
-
-.text-justify{
-    text-align: justify;
-    text-justify: inter-character;    
 }
 
 .flex{
-    display:flex;
-    flex-direction: column;
+    display:flex
+}
+
+.flex-wrap{
     flex-wrap: wrap;
+}
+
+.row-wrap{
+    flex-flow:row wrap;
+}
+
+.column-wrap{
+    flex-flow: column wrap;
 }
 
 .content-justify{
     justify-content: space-between;
 }
 
+/* CORPO */
+
 section#container{
     width:900px; /* Largura da Caixa */
-    height:1309px; /* Altura da Caixa */
+    height:100%; /* Altura da Caixa */
     border:80px solid rgb(5, 5, 5); /* Espessura da Borda, Tipo da Borda e Cor da Borda */
     background-size: 1080px 900px; /* tamanho do background */
     background-color:rgb(5, 5, 5); /* Cor da Caixa */
     margin:auto; /* Centraliza a container de acordo com a largura do dispositivo */
-    border-top:0px; /* borda superior */
+    border-top: 0px; /* borda superior */
+    border-bottom: 0px;
 }
 
 section#container h1{
     font-family: 'Reem Kufi Fun';
     font-size:60px; /* tamanho da fonte */
-    font-weight: 600; /* força do negrito: de 400 a 900 */
+    font-weight: bold; /* força do negrito: de 400 a 900 */
     color:#eea243; /* cor da letra */
     padding-top: 10px; /* margem interna superios */
     text-align: center;
 }
 
-section#container h1 span.note{
-    font-family: 'Reem Kufi Fun';
-    font-size:60px; /* tamanho da fonte */
-    font-weight: 600; /* força do negrito: de 400 a 900 */
-    color:rgb(255, 235, 203); /* cor da letra */
-    padding-top: 10px; /* margem interna superios */
-    text-align: center;
+span#span-h1{
+    color:rgb(255,235,203);
 }
 
 section#container h2{
     font-family: 'Reem Kufi Fun';
     font-size:40px;
-    font-weight:500;
+    font-weight:bold;
     color:white;
-    padding-top: 0px;
+    padding-top: 30px;
+    margin-bottom: 30px;
 }
 
 section#container h3{
@@ -68,87 +70,54 @@ section#container h3{
     font-weight:400;
     color:#eea243;
     padding-top: 5px;
+    margin-top: 0px;
 }
 
 div#sobremim{
-    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
-div#sobremim h2{
-    margin-left:10px;
-}
-
-.sobre{
-    text-align: left;
+.texto{
     color:#eea243;
     font-family: 'Roboto';
-    font-size: 18px;
-    margin-left:10px;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.caixa{
+    width: 900px;
+    height: 333px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: 100px;
+    background-color: rgb(5, 5, 5);
+    box-sizing: border-box;
 }
 
 div#formacao{
-    width:900px;
-    height:333px;
-    background-position-y: 100px;
-    background-size:100%;
-    background-repeat:no-repeat;
-    background-color:rgb(5, 5, 5);
-    margin-top:8px;
+    margin-top:0px;
     text-align: right;
+    margin-right: 0px;
+    padding-right: 10px;
 }
 
-div#formacao h2{
-    color:white;
-    padding-top: 35px;
-    margin-right: 10px;
-    
-}
-
-div#formacao h3{
-    margin-right: 10px;
-    padding-top: 17px;
-}
-
-div#formacao ul{
-    list-style: none;
-    margin-right: 10px;
-}
-
-div#formacao li{
+div#formacao p{
     font-family:'Roboto';
     font-size: 18px;
     font-weight:900px;
     color:white;
 }
 
-/* div#idiomas{
-    width:1200px;
-    height:auto;
-    background-color:aquamarine; 
-} */
-
 div#hobbies{
-    width:900px;
-    height:333px;
-    background-size:100%;
-    background-repeat:no-repeat;
-    background-position-y: 100px;
-    background-color:rgb(5, 5, 5);
-    margin-top: 0px;
-    color:white;
-}
-
-div#hobbies h2{
-    color:white;
-    padding-top: 30px;
-    margin-left: 10px;
+    padding-left: 10px;
 }
 
 div#hobbies ul{
     list-style: none;
-    margin-left: 10px;
     margin-right: 10px;
-    padding-top: 33px;
 }
 
 div#hobbies li{
@@ -160,27 +129,15 @@ div#hobbies li{
 }
 
 div#interesses{
-    width:900px;
-    height:333px;
-    background-position-y: 100px;
-    background-size:100%;
-    background-repeat:no-repeat;
-    background-color:rgb(5, 5, 5);
     margin-top: 0px;
-}
-
-div#interesses h2{
-    color:white;
     text-align: right;
-    padding-top: 30px;
-    margin-right: 10px;
+    padding-right: 10px;
 }
 
 div#interesses ul{
     list-style: none;
     text-align: right;
-    margin-right: 10px;
-    padding-top: 34px;
+    padding-top: 5px;
 }
 
 div#interesses li{
@@ -191,5 +148,44 @@ div#interesses li{
     padding-top: 5px; 
 }
 
-/* >>>>>>>>>>>>>>>>>>>>>>>>>> IMAGENS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+.page-selected-button{
+    background-color: crimson;
+}
 
+.item{
+    font-family: 'Roboto';
+    font-size: 25px;
+    margin: 0px 20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+section#menu{
+    width: 1900px;
+    height: 35px;
+    padding-top: 5px;
+}
+
+nav{
+    text-align: center;
+}
+
+section#menu h2{
+    color:white;
+    font-size: 30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-right: 1425px;
+    padding-left: 10px;
+}
+
+section#construcao{
+    display:flex;
+    justify-content: center;
+    color:#eea243;
+}
+section#construcao img{
+    width: 400px;
+    height: 400px;
+    padding-top:10%;
+    padding-left: 10%;
+}
