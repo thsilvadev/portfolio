@@ -2,7 +2,7 @@
 
 *{
     margin: 0; /* Zera todas as margens externas dos elementos */
-    padding: 0;/* Zera todas as margens internas dos elementos */
+    padding: 0; /* Zera todas as margens internas dos elementos */
 }
 
 body{
@@ -10,15 +10,19 @@ body{
 }
 
 .flex{
-    display:flex
+    display:flex; /* display é um propriedade que justifica o comportamento de disposição de um elemento; flex é o parâmetro que torna o display desse elemento "flexível", automaticamente transformando todos os seus filhos em itens flexíveis que se adaptam conforme a caixa pai é redimensionada ou reposicionada. */
 }
 
 .flex-wrap{
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* quando um flex item atinge o limite da caixa (explodem a caixa), ele passa para a coluna de baixo e assim por diante */
 }
 
 .row-wrap{
-    flex-flow:row wrap;
+    flex-flow:row wrap; /* junta o (flex-wrap: wrap) com o (flex-direction:row). Sendo o flex-direction o parâmetro que dita se os elementos devem se configurar em linha (row) ou coluna (column)*/
+}
+
+.row-reverse-wrap{
+    flex-flow: row-reverse wrap; /* row-reverse = linha invertida, linha de trás para a frente. */
 }
 
 .column-wrap{
@@ -26,20 +30,52 @@ body{
 }
 
 .content-justify{
-    justify-content: space-between;
+    justify-content: center; /* parâmetro do display:flex que justifica os flex itens de diversas maneiras, como ao centro da caixa (center), ocupando toda a caixa porém com espaços equidistantes entre si (space-between), entre outros. */
 }
 
 /* CORPO */
 
+    /* Navigation Bar */
+
+.page-selected-button{
+    background-color: #eea243;
+}
+
+.item{
+    font-family: 'Roboto';
+    font-size: 30px;
+    padding: 14px 16px;
+    color: #f2f2f2;
+    text-align: center; /* alinha o texto no centro, na margem esquerda, na margem direita ou de maneira justificada */
+    text-decoration: none; /* decora o texto com sublinha, risco, sobrelinha etc. */
+    float:right; /* propriedade que especifica se o elemento deve flutuar à esquerda, direita ou não flutuar */
+}
+
+.item:hover{ /* seletor usado para selecionar um elemento ao passar o cursor sobre ele */
+    background-color: #ddd;
+    color:black;
+}
+
+.item-left{
+    float:left;
+}
+
+nav{
+    overflow: hidden; /* quando um elemento explodir dentro da "caixa" que o contém, ele será escondido (invisibilizado) */
+    background-color: rgb(22, 22, 22);
+}
+
+    /* Container */
+
 section#container{
-    width:900px; /* Largura da Caixa */
-    height:100%; /* Altura da Caixa */
-    border:80px solid rgb(5, 5, 5); /* Espessura da Borda, Tipo da Borda e Cor da Borda */
+    width:900px; /* largura da caixa */
+    height:100%; /* altura da caixa */
+    border:80px solid rgb(5, 5, 5); /* espessura da borda, tipo da Borda e cor da borda */
     background-size: 1080px 900px; /* tamanho do background */
-    background-color:rgb(5, 5, 5); /* Cor da Caixa */
-    margin:auto; /* Centraliza a container de acordo com a largura do dispositivo */
+    background-color:rgb(5, 5, 5); /* cor de fundo da caixa */
+    margin:auto; /* centraliza a container de acordo com a largura do dispositivo */
     border-top: 0px; /* borda superior */
-    border-bottom: 0px;
+    border-bottom: 0px; /* borda inferior */
 }
 
 section#container h1{
@@ -47,7 +83,7 @@ section#container h1{
     font-size:60px; /* tamanho da fonte */
     font-weight: bold; /* força do negrito: de 400 a 900 */
     color:#eea243; /* cor da letra */
-    padding-top: 10px; /* margem interna superios */
+    padding-top: 10px; /* margem interna superior */
     text-align: center;
 }
 
@@ -61,7 +97,7 @@ section#container h2{
     font-weight:bold;
     color:white;
     padding-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 30px; /* margem externa inferior */
 }
 
 section#container h3{
@@ -70,31 +106,14 @@ section#container h3{
     font-weight:400;
     color:#eea243;
     padding-top: 5px;
-    margin-top: 0px;
+    margin-top: 0px; /* margem externa superior */
 }
 
 div#sobremim{
     padding-left: 10px;
     padding-right: 10px;
-    text-align: justify;
-    text-justify: inter-word;
-}
-
-.texto{
-    color:#eea243;
-    font-family: 'Roboto';
-    font-size: 20px;
-    padding-top: 10px;
-}
-
-.caixa{
-    width: 900px;
-    height: 333px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position-y: 100px;
-    background-color: rgb(5, 5, 5);
-    box-sizing: border-box;
+    text-align: justify; /* alinhamento de texto: justificado */
+    text-justify: inter-word; /* tipo de justificado: separa as palavras para justificar o texto */
 }
 
 div#formacao{
@@ -112,12 +131,12 @@ div#formacao p{
 }
 
 div#hobbies{
-    padding-left: 10px;
+    padding-left: 10px; /* margem interna à esquerda */
 }
 
 div#hobbies ul{
-    list-style: none;
-    margin-right: 10px;
+    list-style: none; /* estilo de lista não ordenada: sem indicadores (pontinhos) */
+    margin-right: 10px; /* margem externa à direita */
 }
 
 div#hobbies li{
@@ -148,44 +167,100 @@ div#interesses li{
     padding-top: 5px; 
 }
 
-.page-selected-button{
-    background-color: crimson;
-}
-
-.item{
+.texto{
+    color:#eea243;
     font-family: 'Roboto';
-    font-size: 25px;
-    margin: 0px 20px;
-    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.caixa{
+    width: 900px;
+    height: 333px;
+    background-size: 100%;
+    background-repeat: no-repeat; /* faz com que a imagem de fundo não se repita caso as dimensões não se equivalham */
+    background-position-y: 100px; /* faz com que a iamgem de fundo seja disposta 100 pixels abaixo da borda superior da caixa */
+    background-color: rgb(5, 5, 5);
+    box-sizing: border-box; /* faz com que os elementos no interior da caixa não explodam a caixa por causa de margin ou padding */
+}
+
+    /* Formulário */
+
+h2#formulario-h2{
+    font-size: 50px;
+    font-family: 'Reem Kufi Fun';
+    color:#ddd;
     text-align: center;
+    margin: 50px 0 30px 0;
 }
 
-section#menu{
-    width: 1900px;
-    height: 35px;
-    padding-top: 5px;
-}
-
-nav{
+div#formulario{
+    margin: 0 auto;
+    width: 900px;
+    height: auto;
     text-align: center;
-}
-
-section#menu h2{
-    color:white;
+    color:#ddd;
+    background-color:#393939;
+    padding: 10px;
+    font-family: 'Roboto';
     font-size: 30px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding-right: 1425px;
-    padding-left: 10px;
 }
+
+input[type=text], select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+::placeholder{
+    color: rgb(197, 197, 197);
+    opacity: 1;
+    font-style: italic;
+}
+
+textarea#mensagem{
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize:none; 
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color:#eea243;
+    color:black;
+    padding: 14px 20px;
+    margin: 32px 0 16px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family:'Roboto';
+    font-size: 30px;
+    font-weight: bold;
+}
+
+input[type=submit]:hover{
+    background-color: #d18e3b;
+}
+
+    /* Em construção */
 
 section#construcao{
-    display:flex;
-    justify-content: center;
     color:#eea243;
 }
+
 section#construcao img{
-    width: 400px;
+    width: 600px;
     height: 400px;
-    padding-top:10%;
-    padding-left: 10%;
+    padding-top:15%;
+    padding-left: 0%;
 }
